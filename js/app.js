@@ -37,6 +37,22 @@ const lands = [
 function makeMiddleEarth () { 
   console.log("1: makeMiddleEarth");
 
+  const middleEarthSection = document.createElement("section");
+  middleEarthSection.id = "middle-earth";
+
+  for(let i = 0; i < lands.length; i++) {
+    const article = document.createElement('article');
+    article.id = lands[i];
+    const h1 = document.createElement('h1');
+    h1.innerText = lands[i];
+    article.appendChild(h1);
+    middleEarthSection.appendChild(article);
+  }
+  document.body.appendChild(middleEarthSection);
+}
+
+// console.log(makeMiddleEarth("Chapter 1 complete - Made Middle Earth"));
+
   // 1. create a section tag with an id of middle-earth
 
   // 2. use a for loop to iterate over the lands array that does the following:
@@ -51,7 +67,7 @@ function makeMiddleEarth () {
 
   // 3. append the section to the body of the DOM.
 
-}
+
 
 
 
@@ -65,6 +81,27 @@ function makeMiddleEarth () {
 
 function makeHobbits() {
   console.log("2: makeHobbits");
+
+  function makeMiddleEarth () { 
+  console.log("1: makeMiddleEarth");
+
+  const middleEarthSection = document.createElement("section");
+  middleEarthSection.id = "middle-earth";
+
+  for(let i = 0; i < lands.length; i++) {
+    const article = document.createElement('article');
+    article.id = lands[i];
+    const h1 = document.createElement('h1');
+    h1.innerText = lands[i];
+    article.appendChild(h1);
+    middleEarthSection.appendChild(article);
+  }
+  document.body.appendChild(middleEarthSection);
+}
+
+  // const middleEarthSection = document.createElement("section");
+  // middleEarthSection.id = "middle-earth";
+
 
   // display an `unordered list` of hobbits in the shire
 
