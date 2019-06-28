@@ -51,7 +51,6 @@ function makeMiddleEarth () {
   document.body.appendChild(middleEarthSection);
 }
 
-// console.log(makeMiddleEarth("Chapter 1 complete - Made Middle Earth"));
 
   // 1. create a section tag with an id of middle-earth
 
@@ -68,10 +67,6 @@ function makeMiddleEarth () {
   // 3. append the section to the body of the DOM.
 
 
-
-
-
-
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 1 complete - Made Middle Earth".
 
@@ -81,27 +76,20 @@ function makeMiddleEarth () {
 
 function makeHobbits() {
   console.log("2: makeHobbits");
+  
+  const randomHobbitSection = document.createElement("ul");
+  randomHobbitSection.id = "new-hobbits";
 
-  function makeMiddleEarth () { 
-  console.log("1: makeMiddleEarth");
-
-  const middleEarthSection = document.createElement("section");
-  middleEarthSection.id = "middle-earth";
-
-  for(let i = 0; i < lands.length; i++) {
-    const article = document.createElement('article');
-    article.id = lands[i];
-    const h1 = document.createElement('h1');
-    h1.innerText = lands[i];
-    article.appendChild(h1);
-    middleEarthSection.appendChild(article);
+  for (let i = 0; i < hobbits.length; i++) {
+    const li = document.createElement('li')
+    li.className = 'hobbit';
+    li.innerText = hobbits[i];
+    randomHobbitSection.appendChild(li);
   }
-  document.body.appendChild(middleEarthSection);
-}
+  const theShire = document.getElementById("The-Shire")
+  theShire.appendChild(randomHobbitSection)
 
-  // const middleEarthSection = document.createElement("section");
-  // middleEarthSection.id = "middle-earth";
-
+  // quiery selector hobbits
 
   // display an `unordered list` of hobbits in the shire
 
