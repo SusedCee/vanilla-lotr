@@ -113,16 +113,14 @@ function makeHobbits() {
 function keepItSecretKeepItSafe() { 
   console.log("3: keepItSecretKeepItSafe");
 
-//   const div = document.createElement("div");
-//   div.id = "the-ring";
-//   div.className = 'magic-imbued-jewelry';
-//   const froBaggins = document.querySelector('Frodo Baggins');
-//   console.log(froBaggins);
-//   froBaggins.appendChild(div);
+  const div = document.createElement("div");
+  div.id = "the-ring";
+  div.className = 'magic-imbued-jewelry';
+  document.querySelector(".hobbit:first-child").appendChild(div);
  }
 
-// const FrodoBaggins = document.getElementById("Frodo Baggins");
-// FrodoBaggins.appendChild(madeTheRing);
+// const frodoBaggins = document.querySelector(":contains("Frodo Baggins")");
+// frodoBaggins.appendChild(madeTheRing);
 
 
 // function keepItSecretKeepItSafe() { 
@@ -189,13 +187,29 @@ function makeBaddies() {
 function makeBuddies () { 
   console.log("5: makeBuddies");
 
+const theBuddies = document.createElement("aside");
+theBuddies.id = "the-Buddies";
+
+  for (let i = 0; i < buddies.length; i++) {
+    const makingBuddies = document.createElement("ul");
+    makingBuddies.id = "new-Buddies";
+    const li = document.createElement('li')
+    li.className = 'buddy';
+    li.innerText = buddies[i];
+    makingBuddies.appendChild(li);
+    theBuddies.appendChild(makingBuddies)
+  }
+const theRivendell = document.getElementById("Rivendell")
+theRivendell.appendChild(makeBuddies)
+}
+
   // create an `aside` tag
    
   // put an `unordered list` of the `'buddies'` in the aside
    
   // insert your aside as a child element of `rivendell`
 
-}
+
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 5 complete - Made the Buddies".
@@ -207,6 +221,11 @@ function makeBuddies () {
 
 function leaveTheShire() { 
   console.log("6: leaveTheShire");
+
+
+  const movingHobbits = document.querySelector("Rivendell")
+  movingHobbits.appendChild(listHobbitSection)
+
 
   // assemble the `hobbits` and move them to `rivendell`
 }
@@ -221,7 +240,8 @@ function leaveTheShire() {
 
 function beautifulStranger() { 
   console.log("7: beautifulStranger");
-
+const changingStrider = document.querySelector("Strider")
+changingStrider = ("Aragon")
   // change the `'Strider'` text to `'Aragorn'`
 }
 
