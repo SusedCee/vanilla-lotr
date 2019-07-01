@@ -117,25 +117,10 @@ function keepItSecretKeepItSafe() {
   div.id = "the-ring";
   div.className = 'magic-imbued-jewelry';
   document.querySelector(".hobbit:first-child").appendChild(div);
- }
-
-// const frodoBaggins = document.querySelector(":contains("Frodo Baggins")");
+ 
+// const frodoBaggins = document.querySelector(":contains('Frodo Baggins')");
 // frodoBaggins.appendChild(madeTheRing);
-
-
-// function keepItSecretKeepItSafe() { 
-//   console.log("3: keepItSecretKeepItSafe");
-
-//   const div = document.createElement("div");
-//   div.id = "the-ring";
-//   div.className = 'magic-imbued-jewelry';
-//   const froBaggins = document.querySelector('Frodo Baggins');
-//   console.log(froBaggins);
-//   froBaggins.appendChild(div);
-// }
-
-
-
+}
   // create a div with an id of `'the-ring'`
 
   // give the div a class of `'magic-imbued-jewelry'`
@@ -189,8 +174,7 @@ function makeBuddies () {
 
 const theBuddies = document.createElement("aside");
 theBuddies.id = "the-Buddies";
-
-  for (let i = 0; i < buddies.length; i++) {
+  for (let i = 0; i < buddies.length; i++) { 
     const makingBuddies = document.createElement("ul");
     makingBuddies.id = "new-Buddies";
     const li = document.createElement('li')
@@ -199,8 +183,9 @@ theBuddies.id = "the-Buddies";
     makingBuddies.appendChild(li);
     theBuddies.appendChild(makingBuddies)
   }
+
 const theRivendell = document.getElementById("Rivendell")
-theRivendell.appendChild(makeBuddies)
+theRivendell.appendChild(theBuddies)
 }
 
   // create an `aside` tag
@@ -223,12 +208,13 @@ function leaveTheShire() {
   console.log("6: leaveTheShire");
 
 
-  const movingHobbits = document.querySelector("Rivendell")
-  movingHobbits.appendChild(listHobbitSection)
+  const newLocation = document.querySelector('#Rivendell')
+  const moveHobbits = document.querySelector('#The-Shire ul')
+  newLocation.appendChild(moveHobbits)
+}
 
 
   // assemble the `hobbits` and move them to `rivendell`
-}
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 6 complete - Left the Shire"
@@ -240,10 +226,14 @@ function leaveTheShire() {
 
 function beautifulStranger() { 
   console.log("7: beautifulStranger");
-const changingStrider = document.querySelector("Strider")
-changingStrider = ("Aragon")
+
+const changingStrider = document.querySelector();
+buddies["Strider"].setAttribute("Aragorn");
+
   // change the `'Strider'` text to `'Aragorn'`
+  console.log(buddies[3]);
 }
+
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 7 complete - Strider is changed to Aragorn"
