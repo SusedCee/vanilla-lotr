@@ -227,11 +227,9 @@ function leaveTheShire() {
 function beautifulStranger() { 
   console.log("7: beautifulStranger");
 
-const changingStrider = document.querySelector();
-buddies["Strider"].setAttribute("Aragorn");
-
+const changingStrider = document.getElementsByTagName("li")[3];
+changingStrider.innerText = "Aragorn";
   // change the `'Strider'` text to `'Aragorn'`
-  console.log(buddies[3]);
 }
 
 
@@ -245,12 +243,30 @@ buddies["Strider"].setAttribute("Aragorn");
 
 function forgeTheFellowShip() { 
   console.log("8: forgeTheFellowShip");
+  
+  const divNew = document.createElement("div");
+  divNew.className = "the-fellowship";
+  for (let i = 0; i < 4; i++){
+      alert(`${document.querySelector('.buddy').innerText} has joined you`);
+      divNew.appendChild(document.querySelector('.buddy'));
+      alert(`${document.querySelector('.hobbit').innerText} has joined you`);
+      divNew.appendChild(document.querySelector('.hobbit'));
+    };
+    alert (`${document.querySelector('.buddy').innerText} has joined you`)
+
+    divNew.appendChild(document.querySelector(".buddy"));
+    document.querySelector('#Rivendell').appendChild(divNew);
+  }
+
+  //loop through buddies and console.log each index
+  //push through fellowship
+
   // create a new div called `'the-fellowship'` within `rivendell`
   // add each `hobbit` and `buddy` one at a time to `'the-fellowship'`
-  // after each character is added make an alert that they // have joined your party
+  // after each character is added make an alert that they 
+  // have joined your party
   
   // NOTE: This won't change what you see in the browser.  Use your Elements tab of your Inspector tools to make sure that it worked.
-}
 
 
 // COMMIT YOUR WORK
