@@ -283,6 +283,12 @@ function theBalrog() {
 
   const changeGandalf = document.getElementsByTagName("li")[0];
   changeGandalf.innerText = "Gandalf the White";
+
+
+
+  document.getElementsByTagName("li")[0].style.backgroundColor = " white";
+  document.getElementsByTagName("li")[0].style.borderColor = "grey";
+
    // change the `'Gandalf'` text to `'Gandalf the White'`
    // apply the following style to the element, make the // background 'white', add a grey border
 }
@@ -374,7 +380,20 @@ function weWantsIt() {
 
 function thereAndBackAgain() { 
   console.log("13: thereAndBackAgain");
-  
+
+  const removeRing = document.getElementById("the-ring")
+  removeRing.remove("the-ring")
+  const removeGollum = document.getElementById("gollum")
+  removeGollum.remove("gollum")
+
+
+  const theFinalShire = document.getElementById("The-Shire")
+
+  const hobbits = document.querySelectorAll(".hobbit")
+    for(let i = 0; i < hobbits.length; i++){
+      theFinalShire.appendChild(hobbits[i]); //hobbits[i] is so that every index in hobbits that we are looping goes in theFinalShire
+    }
+
   // remove `Gollum` and `the Ring` from the document
   // Move all the `hobbits` back to `the shire`
 }
