@@ -290,11 +290,15 @@ function theBalrog() {
 
 
 // ============
-// Chapter 10
+// Chapter 10. -----------------------
 // ============
 
 function hornOfGondor() { 
   console.log("10: hornOfGondor");
+  alert(`The horn of Gondor has been blown, Boromir's been killed by the Uruk-hai!`);
+  const killingBoromir = document.getElementsByTagName("li")[8];
+  killingBoromir.remove("Boromir");
+
   // pop up an alert that the horn of gondor has been blown
   // Boromir's been killed by the Uruk-hai!
   // Remove `Boromir` from the Fellowship
@@ -310,6 +314,21 @@ function hornOfGondor() {
 
 function itsDangerousToGoAlone() { 
   console.log("11: itsDangerousToGoAlone");
+
+  const newFrodoLocation = document.getElementsByTagName('li')[1];
+  const newSamLocation = document.getElementsByTagName('li')[3];
+  const theMordor = document.getElementById("Mordor");
+  theMordor.appendChild(newFrodoLocation);
+  theMordor.appendChild(newSamLocation);
+
+  
+  const doomDiv = document.createElement("div");
+  div.className = 'magic-imbued-jewelry';
+  document.querySelector(".hobbit:first-child").appendChild(div);
+  // .appendChild()
+
+
+
   // take `Frodo` and `Sam` out of the fellowship and move // them to `Mordor`
   // add a div with an id of `'mount-doom'` to `Mordor`
 }
