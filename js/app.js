@@ -174,6 +174,7 @@ function makeBuddies () {
 
 const theBuddies = document.createElement("aside");
 theBuddies.id = "the-Buddies";
+theBuddies.innerText = "The Buddies";
   for (let i = 0; i < buddies.length; i++) { 
     const makingBuddies = document.createElement("ul");
     makingBuddies.id = "new-Buddies";
@@ -246,6 +247,7 @@ function forgeTheFellowShip() {
   
   const divNew = document.createElement("div");
   divNew.className = "the-fellowship";
+  divNew.innerText = "The Fellowship";
   for (let i = 0; i < 4; i++){
       alert(`${document.querySelector('.buddy').innerText} has joined you`);
       divNew.appendChild(document.querySelector('.buddy'));
@@ -290,7 +292,7 @@ function theBalrog() {
 
 
 // ============
-// Chapter 10. -----------------------
+// Chapter 10. 
 // ============
 
 function hornOfGondor() { 
@@ -323,11 +325,11 @@ function itsDangerousToGoAlone() {
 
   
   const doomDiv = document.createElement("div");
-  div.className = 'magic-imbued-jewelry';
-  document.querySelector(".hobbit:first-child").appendChild(div);
-  // .appendChild()
-
-
+  doomDiv.id = "mount-doom";
+  doomDiv.innerText = "Mount Doom"
+  // doomDiv.innerText = baddies[i];
+  // const theMordor = document.getElementById("Mordor")
+  document.getElementById("Mordor").appendChild(doomDiv);
 
   // take `Frodo` and `Sam` out of the fellowship and move // them to `Mordor`
   // add a div with an id of `'mount-doom'` to `Mordor`
@@ -344,6 +346,19 @@ function itsDangerousToGoAlone() {
 
 function weWantsIt() { 
   console.log("12: weWantsIt");
+
+  const makingGollum = document.createElement("div");
+  makingGollum.id = "gollum";
+  makingGollum.innerText = "gollum";
+  document.getElementById("Mordor").appendChild(makingGollum);
+
+  const movingRing = document.getElementById("the-ring")
+  const ringToGollum = document.getElementById("gollum")
+  ringToGollum.appendChild(movingRing)
+  
+  const gollumToMountDoom = document.getElementById("mount-doom");
+  gollumToMountDoom.appendChild(ringToGollum)
+
   // Create a div with an id of `'gollum'` and add it to Mordor
   // Remove `the ring` from `Frodo` and give it to `Gollum`
   // Move Gollum into Mount Doom
@@ -359,6 +374,7 @@ function weWantsIt() {
 
 function thereAndBackAgain() { 
   console.log("13: thereAndBackAgain");
+  
   // remove `Gollum` and `the Ring` from the document
   // Move all the `hobbits` back to `the shire`
 }
